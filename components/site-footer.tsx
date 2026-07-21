@@ -4,13 +4,11 @@ export function SiteFooter() {
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 lg:flex-row lg:items-end lg:justify-between lg:px-10">
         <div>
           <div className="flex items-center gap-3">
-            <span className="relative block h-11 w-11 overflow-hidden rounded-full ring-1 ring-sand/60">
-              <img
-                src="/images/logo-mark.jpg"
-                alt="BespokeTouch"
-                className="absolute left-1/2 top-1/2 h-[150%] w-[150%] -translate-x-1/2 -translate-y-1/2 object-cover"
-              />
-            </span>
+            <img
+              src="/images/logo-mark.png"
+              alt="BespokeTouch"
+              className="h-12 w-12 object-contain"
+            />
             <p className="font-serif text-2xl text-charcoal">BespokeTouch</p>
           </div>
           <p className="mt-3 max-w-xs text-sm leading-relaxed text-slate">
