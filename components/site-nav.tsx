@@ -27,9 +27,21 @@ export function SiteNav() {
           : 'bg-transparent'
       }`}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-10">
+      {/* Subtle top scrim so light nav text stays legible over the dark hero (no page background change) */}
+      {!scrolled && (
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-charcoal/55 to-transparent"
+        />
+      )}
+
+      <nav className="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-10">
         <a href="#gora" className="flex items-baseline gap-2">
-          <span className="font-serif text-xl tracking-tight text-charcoal">
+          <span
+            className={`font-serif text-xl tracking-tight transition-colors duration-500 ${
+              scrolled ? 'text-charcoal' : 'text-cream drop-shadow-sm'
+            }`}
+          >
             BespokeTouch
           </span>
         </a>
@@ -39,7 +51,11 @@ export function SiteNav() {
             <li key={link.href}>
               <a
                 href={link.href}
-                className="text-sm text-slate transition-colors hover:text-charcoal"
+                className={`text-sm transition-colors duration-500 ${
+                  scrolled
+                    ? 'text-slate hover:text-charcoal'
+                    : 'text-cream/90 drop-shadow-sm hover:text-cream'
+                }`}
               >
                 {link.label}
               </a>
@@ -49,7 +65,11 @@ export function SiteNav() {
 
         <a
           href="#kontakt"
-          className="rounded-full bg-clay-dark px-5 py-2.5 text-sm font-medium text-cream shadow-soft transition-colors hover:bg-charcoal"
+          className={`rounded-full px-5 py-2.5 text-sm font-medium shadow-soft transition-colors duration-500 ${
+            scrolled
+              ? 'bg-clay-dark text-cream hover:bg-charcoal'
+              : 'bg-cream/95 text-charcoal hover:bg-cream'
+          }`}
         >
           Umów pokaz
         </a>
