@@ -16,14 +16,16 @@ export function ClosingCta() {
       <div className="relative mx-auto max-w-3xl px-6 text-center lg:px-10">
         <Reveal>
           <p className="mb-6 text-sm uppercase tracking-[0.22em] text-clay-light">
-            Jeden gabinet albo sto
+            Porozmawiajmy o Twoim Spa
           </p>
           <h2 className="text-balance font-serif text-4xl leading-[1.1] text-cream sm:text-5xl lg:text-6xl">
-            Zobaczmy, jak wygląda Twoje powitanie.
+            Pokażemy to
+            <br />
+            <em className="text-clay-light">w Twoim gabinecie.</em>
           </h2>
           <p className="mx-auto mt-7 max-w-xl text-pretty text-lg leading-relaxed text-cream/75">
-            Pokażemy tablet w akcji na Twoim menu zabiegów — od pojedynczej
-            leżanki po sieć z osobnym brandingiem każdej lokalizacji. Bez
+            Trzydzieści minut, jeden tablet, katalog wgrany z Twojego menu.
+            Zobaczysz cały przepływ na przykładzie własnej oferty. Bez
             zobowiązań, bez wgrywania czegokolwiek.
           </p>
 

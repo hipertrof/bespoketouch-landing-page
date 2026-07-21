@@ -30,7 +30,7 @@ export function Hero() {
       {/* Photograph */}
       <div className="absolute inset-0">
         <img
-          src="/images/hero-room.png"
+          src="/images/heroupscalenologo.jpg"
           alt="Przyciemniony gabinet masażu oświetlony świecami, tablet spoczywa na złożonym lnianym ręczniku, ekran delikatnie świeci"
           className="h-full w-full object-cover"
         />
@@ -92,17 +92,18 @@ export function Hero() {
       <div className="relative mx-auto w-full max-w-6xl px-6 pb-20 pt-40 lg:px-10 lg:pb-28">
         <p className="mb-6 flex items-center gap-3 text-sm uppercase tracking-[0.25em] text-cream/70">
           <span className="h-px w-8 bg-clay-light" />
-          Masaż skrojony na miarę
+          Dla salonów masażu i spa
         </p>
         <h1 className="max-w-4xl text-balance font-serif text-5xl leading-[1.05] text-cream sm:text-6xl lg:text-7xl">
-          Wchodzi,
+          Masaż skrojony
           <br />
-          już wiedząc.
+          <em className="text-clay-light">na miarę.</em>
         </h1>
         <p className="mt-8 max-w-xl text-pretty text-lg leading-relaxed text-cream/80">
-          Gość zaznacza na tablecie, gdzie boli, jaki olejek lubi i czy woli
-          ciszę. Terapeuta otwiera drzwi z gotowym powitaniem — bez ankiet przy
-          leżance, bez zgadywania.
+          Zastępujemy papierowe ankiety eleganckim rozwiązaniem
+          technologicznym. Gość zaznacza na mapie ciała strefy napięć oraz
+          wybiera zapach olejku, nacisk i muzykę. Twój terapeuta wkracza do
+          gabinetu w pełni przygotowany.
         </p>
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">

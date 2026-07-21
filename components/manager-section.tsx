@@ -1,7 +1,5 @@
 import { Reveal } from './reveal'
 
-const bars = [62, 74, 68, 81, 77, 88, 84, 91, 86, 93, 89, 95]
-
 export function ManagerSection() {
   return (
     <section id="raporty" className="bg-cream-dark py-28 lg:py-36">
@@ -13,96 +11,34 @@ export function ManagerSection() {
               Widok menedżera
             </p>
             <h2 className="text-balance font-serif text-4xl leading-tight text-charcoal sm:text-5xl">
-              Problem widać, zanim stanie się złą opinią.
+              Problem widzisz,
+              <br />
+              <em className="text-clay-dark">zanim stanie się recenzją.</em>
             </h2>
             <p className="mt-6 max-w-md text-pretty text-lg leading-relaxed text-slate">
               Krótka, całkowicie pomijalna ankieta po zabiegu zasila panel
-              dostępny tylko dla menedżera: CSAT, NPS, wskaźnik niedopasowania
-              nacisku i podział na terapeutów oraz zabiegi. Terapeuci nie widzą
+              dostępny tylko dla menedżera: ocena zadowolenia i chęci polecenia
+              usługi, wskaźnik niedopasowania nacisku oraz podział wyników na
+              terapeutów i zabiegi. Terapeuci nie widzą
               własnych ocen — liczby służą rozmowie, nie rankingowi.
             </p>
           </Reveal>
 
-          {/* Dashboard mockup */}
+          {/* Reports mockup */}
           <Reveal delay={120}>
-            <div className="rounded-3xl border border-sand/70 bg-cream p-7 shadow-lift sm:p-8">
-              <div className="mb-6 flex items-center justify-between">
-                <span className="text-sm font-medium text-slate">
-                  Ostatnie 30 dni
-                </span>
-                <span className="rounded-full bg-sage-tint px-3 py-1 text-xs font-medium text-sage-dark">
-                  142 odpowiedzi
-                </span>
-              </div>
-
-              <div className="grid grid-cols-3 gap-4">
-                <Stat label="Średni CSAT" value="4,8" unit="/ 5" tone="clay" />
-                <Stat label="NPS" value="+72" tone="sage" />
-                <Stat label="Niedopasowanie nacisku" value="4%" tone="slate" />
-              </div>
-
-              <div className="mt-8">
-                <div className="mb-3 flex items-center justify-between text-xs text-slate-light">
-                  <span>Satysfakcja w czasie</span>
-                  <span>trend</span>
-                </div>
-                <div className="flex h-28 items-end gap-1.5">
-                  {bars.map((h, i) => (
-                    <div
-                      key={i}
-                      className="flex-1 rounded-t-md bg-clay-light"
-                      style={{
-                        height: `${h}%`,
-                        backgroundColor:
-                          i === bars.length - 1
-                            ? 'var(--color-clay-dark)'
-                            : undefined,
-                      }}
-                    />
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-7 border-t border-sand/60 pt-5">
-                <p className="text-xs uppercase tracking-wider text-slate-light">
-                  Ostatni komentarz
-                </p>
-                <p className="mt-2 font-serif text-lg italic leading-snug text-charcoal">
-                  „Idealna cisza i dokładnie te miejsca, o które prosiłam.”
-                </p>
-              </div>
-            </div>
+            <figure className="overflow-hidden rounded-3xl border border-sand/70 shadow-soft">
+              <img
+                src="/images/reports.png"
+                alt="Panel menedżera BespokeTouch wyświetlający wyniki ankiet zadowolenia i wskaźniki wydajności terapeutów"
+                className="h-full w-full object-cover"
+              />
+            </figure>
+            <p className="mt-4 text-center text-sm italic text-slate-light">
+              Trafia do Ciebie. Nie do wyszukiwarki.
+            </p>
           </Reveal>
         </div>
       </div>
     </section>
-  )
-}
-
-function Stat({
-  label,
-  value,
-  unit,
-  tone,
-}: {
-  label: string
-  value: string
-  unit?: string
-  tone: 'clay' | 'sage' | 'slate'
-}) {
-  const color =
-    tone === 'clay'
-      ? 'text-clay-dark'
-      : tone === 'sage'
-        ? 'text-sage'
-        : 'text-charcoal'
-  return (
-    <div className="rounded-2xl bg-oatmeal/70 p-4">
-      <p className={`font-serif text-3xl leading-none ${color}`}>
-        {value}
-        {unit && <span className="text-base text-slate-light"> {unit}</span>}
-      </p>
-      <p className="mt-2 text-xs leading-snug text-slate">{label}</p>
-    </div>
   )
 }

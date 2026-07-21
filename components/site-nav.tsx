@@ -1,11 +1,12 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { LogoMark } from './logo-mark'
 
 const links = [
   { href: '#gosc', label: 'Dla gościa' },
   { href: '#terapeuta', label: 'Dla terapeuty' },
-  { href: '#raporty', label: 'Raporty' },
+  { href: '#demo', label: 'Demo' },
   { href: '#kontakt', label: 'Kontakt' },
 ]
 
@@ -37,13 +38,7 @@ export function SiteNav() {
 
       <nav className="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-10">
         <a href="#gora" className="flex items-center gap-3">
-          <span className="relative block h-11 w-11 overflow-hidden rounded-full">
-            <img
-              src="/images/logo-mark-2.png"
-              alt="BespokeTouch"
-              className="absolute left-1/2 top-1/2 h-[135%] w-[135%] -translate-x-1/2 -translate-y-1/2 object-cover"
-            />
-          </span>
+          <LogoMark className="h-11 w-11" />
           <span
             className={`font-serif text-xl tracking-tight transition-colors duration-500 ${
               scrolled ? 'text-charcoal' : 'text-cream drop-shadow-sm'

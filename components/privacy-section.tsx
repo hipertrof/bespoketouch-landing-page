@@ -2,7 +2,7 @@ import { Reveal } from './reveal'
 
 export function PrivacySection() {
   return (
-    <section className="bg-oatmeal-dark py-28 lg:py-36">
+    <section id="bezpieczenstwo" className="bg-oatmeal-dark py-28 lg:py-36">
       <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-2 lg:px-10">
         <Reveal>
           <p className="mb-5 flex items-center gap-3 text-sm uppercase tracking-[0.22em] text-sage-dark">
@@ -10,7 +10,9 @@ export function PrivacySection() {
             Pamięć bez śladu
           </p>
           <h2 className="text-balance font-serif text-4xl leading-tight text-charcoal sm:text-5xl">
-            Rozpoznajemy stałego gościa, nie przechowując jego numeru.
+            Pamiętamy gościa.
+            <br />
+            <em className="text-sage-dark">Nie jego numer.</em>
           </h2>
           <p className="mt-6 max-w-md text-pretty text-lg leading-relaxed text-slate">
             Przy kolejnej wizycie preferencje wracają jednym dotknięciem — ale

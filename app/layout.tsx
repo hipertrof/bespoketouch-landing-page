@@ -11,6 +11,7 @@ const jakarta = Plus_Jakarta_Sans({
 
 const lora = Lora({
   subsets: ['latin'],
+  style: ['normal', 'italic'],
   variable: '--font-serif',
   display: 'swap',
 })

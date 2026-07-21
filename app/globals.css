@@ -46,6 +46,14 @@
   color-scheme: light;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 6rem;
+}
+
 @layer base {
   body {
     background-color: var(--color-cream);
@@ -159,6 +167,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
   .reveal {
     opacity: 1;
     transform: none;
