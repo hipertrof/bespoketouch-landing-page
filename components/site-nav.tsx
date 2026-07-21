@@ -36,7 +36,14 @@ export function SiteNav() {
       )}
 
       <nav className="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-10">
-        <a href="#gora" className="flex items-baseline gap-2">
+        <a href="#gora" className="flex items-center gap-3">
+          <span className="relative block h-10 w-10 overflow-hidden rounded-full ring-1 ring-sand/60 shadow-soft">
+            <img
+              src="/images/logo-mark.jpg"
+              alt="BespokeTouch"
+              className="absolute left-1/2 top-1/2 h-[150%] w-[150%] -translate-x-1/2 -translate-y-1/2 object-cover"
+            />
+          </span>
           <span
             className={`font-serif text-xl tracking-tight transition-colors duration-500 ${
               scrolled ? 'text-charcoal' : 'text-cream drop-shadow-sm'

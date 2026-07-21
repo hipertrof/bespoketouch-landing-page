@@ -3,8 +3,17 @@ export function SiteFooter() {
     <footer className="bg-cream py-14">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-6 lg:flex-row lg:items-end lg:justify-between lg:px-10">
         <div>
-          <p className="font-serif text-2xl text-charcoal">BespokeTouch</p>
-          <p className="mt-2 max-w-xs text-sm leading-relaxed text-slate">
+          <div className="flex items-center gap-3">
+            <span className="relative block h-11 w-11 overflow-hidden rounded-full ring-1 ring-sand/60">
+              <img
+                src="/images/logo-mark.jpg"
+                alt="BespokeTouch"
+                className="absolute left-1/2 top-1/2 h-[150%] w-[150%] -translate-x-1/2 -translate-y-1/2 object-cover"
+              />
+            </span>
+            <p className="font-serif text-2xl text-charcoal">BespokeTouch</p>
+          </div>
+          <p className="mt-3 max-w-xs text-sm leading-relaxed text-slate">
             Masaż skrojony na miarę. Tablet w gabinecie, panel dla zespołu.
           </p>
         </div>
