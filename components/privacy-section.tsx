@@ -1,4 +1,5 @@
 import { Reveal } from './reveal'
+import { withBasePath } from '@/lib/asset-path'
 
 export function PrivacySection() {
   return (
@@ -40,7 +41,7 @@ export function PrivacySection() {
         <Reveal delay={120}>
           <figure className="overflow-hidden rounded-3xl shadow-lift">
             <img
-              src="/images/tablet-linen.png"
+              src={withBasePath('/images/tablet-linen.png')}
               alt="Tablet leżący na naturalnym lnie obok miseczki olejku i gałązki suszonej lawendy w miękkim dziennym świetle"
               className="h-full w-full object-cover"
             />

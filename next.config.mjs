@@ -1,6 +1,8 @@
 const repoName = 'bespoketouch-landing-page'
-// Set NEXT_PUBLIC_USE_BASE_PATH=false once a custom domain is configured for GitHub Pages.
-const useBasePath = process.env.NEXT_PUBLIC_USE_BASE_PATH !== 'false'
+// Set by the GitHub Pages workflow; unset (false) for local dev/build.
+// Set NEXT_PUBLIC_USE_BASE_PATH=false in that workflow once a custom domain is configured.
+const useBasePath = process.env.NEXT_PUBLIC_USE_BASE_PATH === 'true'
+const basePath = useBasePath ? `/${repoName}` : ''
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -11,9 +13,12 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
   ...(useBasePath && {
-    basePath: `/${repoName}`,
-    assetPrefix: `/${repoName}/`,
+    basePath,
+    assetPrefix: `${basePath}/`,
   }),
 }
 

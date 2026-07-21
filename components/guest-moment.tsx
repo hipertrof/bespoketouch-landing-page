@@ -1,4 +1,5 @@
 import { Reveal } from './reveal'
+import { withBasePath } from '@/lib/asset-path'
 
 export function GuestMoment() {
   return (
@@ -30,7 +31,7 @@ export function GuestMoment() {
               </div>
               <figure className="overflow-hidden rounded-2xl border border-sand/50 shadow-soft">
                 <img
-                  src="/images/map.png"
+                  src={withBasePath('/images/map.png')}
                   alt="Mapa ciała w aplikacji BespokeTouch, na której gość zaznacza strefy priorytetowe i wykluczone"
                   className="h-full w-full object-cover"
                 />

@@ -1,4 +1,5 @@
 import { Reveal } from './reveal'
+import { withBasePath } from '@/lib/asset-path'
 
 export function ManagerSection() {
   return (
@@ -28,7 +29,7 @@ export function ManagerSection() {
           <Reveal delay={120}>
             <figure className="overflow-hidden rounded-3xl border border-sand/70 shadow-soft">
               <img
-                src="/images/reports.png"
+                src={withBasePath('/images/reports.png')}
                 alt="Panel menedżera BespokeTouch wyświetlający wyniki ankiet zadowolenia i wskaźniki wydajności terapeutów"
                 className="h-full w-full object-cover"
               />

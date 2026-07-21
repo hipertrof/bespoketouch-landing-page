@@ -1,4 +1,5 @@
 import { Reveal } from './reveal'
+import { withBasePath } from '@/lib/asset-path'
 
 export function TherapistProcedure() {
   return (
@@ -9,7 +10,7 @@ export function TherapistProcedure() {
       {/* Candlelit backdrop */}
       <div className="absolute inset-0">
         <img
-          src="/images/candlelit-hands.png"
+          src={withBasePath('/images/candlelit-hands.png')}
           alt=""
           aria-hidden="true"
           className="h-full w-full object-cover opacity-40"
@@ -46,7 +47,7 @@ export function TherapistProcedure() {
         <Reveal delay={140}>
           <figure className="aspect-[4/5] overflow-hidden rounded-3xl border border-cream/12 shadow-lift">
             <img
-              src="/images/therapist.png"
+              src={withBasePath('/images/therapist.png')}
               alt="Podsumowanie preferencji gościa w aplikacji BespokeTouch, które terapeuta widzi przed wejściem do gabinetu"
               className="h-full w-full object-cover object-top"
             />

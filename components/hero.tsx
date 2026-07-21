@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo } from 'react'
+import { withBasePath } from '@/lib/asset-path'
 
 export function Hero() {
   // Deterministic-ish motes generated once on mount
@@ -30,7 +31,7 @@ export function Hero() {
       {/* Photograph */}
       <div className="absolute inset-0">
         <img
-          src="/images/heroupscalenologo.jpg"
+          src={withBasePath('/images/heroupscalenologo.jpg')}
           alt="Przyciemniony gabinet masażu oświetlony świecami, tablet spoczywa na złożonym lnianym ręczniku, ekran delikatnie świeci"
           className="h-full w-full object-cover"
         />
